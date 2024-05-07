@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="public/css/app.css">
+</head>
+
+<body>
+  <input type="checkbox" id="checkfull">Test full 60 câu
+  <input type="checkbox" id="checkrandom">Test ranđom 20 câu
+  <div class="box-question">
+    <h2>Tiêu đề chung của của các câu hỏi</h2>
+    <div class="question">
+      <table class="picture" align="center">
+        <tbody>
+          <tr>
+            <td class="pic"><img alt="" width="" height="" loading="lazy" src="link ảnh"></td>
+          </tr>
+          <tr>
+            <td class="caption">
+              <h3>Câu hỏi 1</h3>
+              <ul>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li class="correct"><strong>Câu trả lời đúng</strong></li>
+              </ul>
+              <p>Viết mô tả cho câu trả lời đúng cho câu hỏi 1</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="picture" align="center">
+        <tbody>
+          <tr>
+            <td class="pic"><img alt="" width="" height="" loading="lazy" src="link ảnh"></td>
+          </tr>
+          <tr>
+            <td class="caption">
+              <h3>Câu hỏi 2</h3>
+              <ul>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li class="correct"><strong>Câu trả lời đúng</strong></li>
+              </ul>
+             <p>Viết mô tả cho câu trả lời đúng cho câu hỏi 2</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="picture" align="center">
+        <tbody>
+          <tr>
+            <td class="pic"><img alt="" width="" height="" loading="lazy" src="link ảnh"></td>
+          </tr>
+          <tr>
+            <td class="caption">
+              <h3>Câu hỏi 3</h3>
+              <ul>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li class="correct"><strong>Câu trả lời đúng</strong></li>
+              </ul>
+              <p>Viết mô tả cho câu trả lời đúng cho câu hỏi n</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="picture" align="center">
+        <tbody>
+          <tr>
+            <td class="pic"><img alt="" width="" height="" loading="lazy" src="link ảnh"></td>
+          </tr>
+          <tr>
+            <td class="caption">
+              <h3>Câu hỏi 4</h3>
+              <ul>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li class="correct"><strong>Câu trả lời đúng</strong></li>
+              </ul>
+              <p>Viết mô tả cho câu trả lời đúng cho câu hỏi 1</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="picture" align="center">
+        <tbody>
+          <tr>
+            <td class="pic"><img alt="" width="" height="" loading="lazy" src="link ảnh"></td>
+          </tr>
+          <tr>
+            <td class="caption">
+              <h3>Câu hỏi 5</h3>
+              <ul>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li class="correct"><strong>Câu trả lời đúng</strong></li>
+              </ul>
+             <p>Viết mô tả cho câu trả lời đúng cho câu hỏi 2</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="picture" align="center">
+        <tbody>
+          <tr>
+            <td class="pic"><img alt="" width="" height="" loading="lazy" src="link ảnh"></td>
+          </tr>
+          <tr>
+            <td class="caption">
+              <h3>Câu hỏi 6</h3>
+              <ul>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li>Câu trả lời</li>
+                <li class="correct"><strong>Câu trả lời đúng</strong></li>
+              </ul>
+              <p>Viết mô tả cho câu trả lời đúng cho câu hỏi n</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="result">
+      <span class="message">Hãy trả lời các câu hỏi để biết kết quả của bạn</span>
+      <div id="topBar"><button id="btnHome" onclick="window.location='Listening_part1.html'">Load làm lại</button></div>
+    </div>
+  </div>  
+  <script>
+    window.addEventListener('load', function () {
+      var q = $('.question'),
+        w = ["Bạn là thần đồng", "Bạn rất suất xắc", "Kiến thức của bạn khá tốt", "Bạn có thể làm tốt hơn thế"]
+      $(q).each(function (n) {
+        var ul = $(q[n]).find('ul'), mes = $(q[n]).parent().find('.message')
+        console.log(mes)
+        $(ul).each(function (i, v) {
+          var li = $(ul[i]).find('li'), p = $(ul[i]).next('p'), cor = $(ul[i]).find('li.correct')
+          $(li).one('click', function () {
+            $(this).parent().addClass('answered')
+            $(this).addClass('selected')
+            $(p).appendTo($(cor)).addClass('explaination')
+            if (i == ul.length - 1) {
+              var corr = $(ul).find('li.correct.selected').length,
+                s = corr * 100 / ul.length - 1
+              v = '<span class="correct">' + corr + '</span><span class="total">' + ul.length + '</span>',
+                $(v).insertAfter($(mes))
+              w.forEach(function () {
+                if (s == 100) $(mes).html(w[0])
+                else if (s >= 80) $(mes).html(w[1])
+                else if (s >= 50) $(mes).html(w[2])
+                else $(mes).html(w[3])
+              })
+            }
+          })
+        })
+      })
+    })
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="public/js/app.js"></script>
+
+</body>
+
+</html>
