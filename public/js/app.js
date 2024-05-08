@@ -9,6 +9,7 @@ btnFull.checked = true;
 btnRnd.checked = false;
 console.log(btnRnd);
 let i;
+let sum = 60;
 btnRnd.addEventListener('click', function(){
     btnFull.checked = false;
     let rd_num = getRndInteger(min, max);
@@ -37,7 +38,8 @@ btnRnd.addEventListener('click', function(){
                 slides[i].style.display = "block";
             }
         }
-        rowNumImg();
+        sum = 20;
+        rowNumImg(sum);
     }
 });
 ///----------------------
@@ -46,17 +48,18 @@ btnFull.addEventListener('click', function(){
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "block";
     }
-    rowNumImg();
+    sum = 60;
+    rowNumImg(sum);
     
 });
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 let iNumImg = 0;
-rowNumImg();
-function rowNumImg(){
+rowNumImg(sum);
+function rowNumImg(sum){
     iNumImg = 0;
-    for (i = 0; i < 20; i++) {
+    for (i = 0; i < sum; i++) {
         iNumImg = iNumImg + 1;
         _img_num[i].innerHTML = 'Hình ' + iNumImg;
     }
