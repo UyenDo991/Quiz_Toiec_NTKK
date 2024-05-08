@@ -4,7 +4,7 @@ var btnFull = document.getElementById('checkfull');
 const _img_num = document.querySelectorAll('.img_num');
 
 let min = 0;
-let max = 5;
+let max = 60;
 btnFull.checked = true;
 btnRnd.checked = false;
 console.log(btnRnd);
@@ -16,8 +16,8 @@ btnRnd.addEventListener('click', function(){
     console.log(slides.length);
     showSlides_Content_6_M(rd_num);
     function showSlides_Content_6_M(rd_num) {
-        let _number_from = Number(rd_num); 5
-        let _number_to = Number(rd_num) + 2; 7
+        let _number_from = Number(rd_num); 
+        let _number_to = Number(rd_num) + 20; 
         let _check_num = 0; 
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
@@ -55,6 +55,7 @@ function getRndInteger(min, max) {
 let iNumImg = 0;
 rowNumImg();
 function rowNumImg(){
+    iNumImg = 0;
     for (i = 0; i < 20; i++) {
         iNumImg = iNumImg + 1;
         _img_num[i].innerHTML = 'Hình ' + iNumImg;
