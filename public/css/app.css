@@ -5,7 +5,7 @@
 table.picture{width:100%;border-collapse:collapse;border-spacing:0;margin:18px 0;border-radius:5px;background:#fffbfb;overflow:hidden;line-height:1.5}
 table.picture+.picture{margin-top:22px}
 table.picture td{position:relative;cursor:default}
-table.picture img{max-width:100%;width:100%;height:auto;display:block}
+table.picture img{max-width:50%;width:50%;height:auto;display:block}
 table.picture td.caption{padding:20px 20px 0 20px!important;color:#000}
 
 
