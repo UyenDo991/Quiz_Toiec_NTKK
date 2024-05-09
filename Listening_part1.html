@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Listening Part 1</title>
   <link rel="stylesheet" href="public/css/app.css">
 </head>
 
 <body>
   <p>Ghi chú: Tập trung học câu trả lời đúng <br> những câu sai tự bịa chỉ mang tính chất góp mặt cho vui.</p>
+  <div id="topBar">
+    <button id="btnHome" onclick="window.location='index.html'">Về trang chủ</button>
+  </div>
   <input type="checkbox" id="checkfull">Test full 50 câu (part 2 - part 6)
   <input type="checkbox" id="checkrandom">Test random 20 câu
   <div class="box-question">
@@ -964,7 +967,10 @@
     </div>
     <div class="result">
       <span class="message">Hãy trả lời các câu hỏi để biết kết quả của bạn</span>
-      <div id="topBar"><button id="btnHome" onclick="window.location='Listening_part1.html'">Load làm lại</button></div>
+      <div id="topBar">
+        <button id="btnLoad" onclick="window.location='Listening_part1.html'">Load làm lại</button>
+        <button id="btnHome" onclick="window.location='index.html'">Về trang chủ</button>
+      </div>
     </div>
   </div>  
   <script>
