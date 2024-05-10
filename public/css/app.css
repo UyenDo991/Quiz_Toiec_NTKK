@@ -8,6 +8,11 @@ table.picture td{position:relative;cursor:default}
 table.picture img{width:450px;height:300px;display:block}
 table.picture td.caption{padding:20px 20px 0 20px!important;color:#000}
 
+table.picture_1{width:100%;border-collapse:collapse;border-spacing:0;margin:18px 0;border-radius:5px;background:#fffbfb;overflow:hidden;line-height:1.5}
+table.picture_1+.picture_1{margin-top:22px}
+table.picture_1 td{position:relative;cursor:default}
+table.picture_1 img{width:600px;height:450px;display:block}
+table.picture_1 td.caption{padding:20px 20px 0 20px!important;color:#000}
 
 
 .question ul{margin:10px 0 20px!important;list-style:none;padding:0!important}
