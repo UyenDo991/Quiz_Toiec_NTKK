@@ -37,4 +37,4 @@ table.picture td.caption{padding:20px 20px 0 20px!important;color:#000}
 .question+.result>.correct{color:#55d000;font-weight:bold;font-size:2em}
 .question+.result>.total{font-size:2em;color:#f16464}
 .question+.result>.total:before{content:"/"}
-@media(min-width:1025px){.question ul:not(.answered)>li{cursor:pointer}.question ul.answered>li{cursor:default;pointer-events:none}}
+@media(min-width:920px){.question ul:not(.answered)>li{cursor:pointer}.question ul.answered>li{cursor:default;pointer-events:none}}
